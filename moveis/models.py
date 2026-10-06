@@ -1,4 +1,5 @@
 from django.db import models
+# Create your models here.
 
 class Movel(models.Model):
     nome = models.CharField(max_length=100)
@@ -7,6 +8,6 @@ class Movel(models.Model):
     material = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.nome
+        return f"{self.nome} - R$ {self.preco}"
+        
 
-# Create your models here.
