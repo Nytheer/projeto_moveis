@@ -1,0 +1,319 @@
+/* =========================================
+   CASABELA — CATÁLOGO DE MÓVEIS
+   ========================================= */
+
+
+/* ---------- RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #f4efe6;
+    color: #3f3328;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ---------- CONTAINER PRINCIPAL ---------- */
+
+body > div {
+    width: 92%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 35px;
+    background-color: #fffdf8;
+    border: 1px solid #e4d8c7;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(73, 54, 38, 0.10);
+}
+
+
+/* ---------- TÍTULO ---------- */
+
+h1 {
+    margin-bottom: 15px;
+    color: #594331;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    margin: 12px auto 0;
+    background-color: #78805a;
+    border-radius: 10px;
+}
+
+
+h2 {
+    margin-bottom: 15px;
+    color: #594331;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: -0.6px;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    margin: 12px auto 0;
+    background-color: #78805a;
+    border-radius: 10px;
+}
+
+
+/* ---------- IMAGEM / BANNER ---------- */
+
+.imagem-banner {
+    display: block;
+    width: 100%;
+    height: 280px;
+    margin: 0 auto 30px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid #d8c8b5;
+    box-shadow: 0 5px 18px rgba(73, 54, 38, 0.12);
+}
+
+
+/* ---------- TABELA ---------- */
+
+table {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #fffdf8;
+    border: 1px solid #ded1bf;
+    border-radius: 14px;
+}
+
+
+/* Cabeçalho */
+
+table tr:first-child {
+    background-color: #62503e !important;
+    color: #fffaf2;
+}
+
+th {
+    padding: 16px 18px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+
+/* Células */
+
+td {
+    padding: 16px 18px;
+    border-bottom: 1px solid #ebe1d4;
+    font-size: 1.05rem;
+}
+
+
+/* Remove a borda da última linha */
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* Linhas alternadas */
+
+table tr:not(:first-child):nth-child(even) {
+    background-color: #faf6ee;
+}
+
+
+/* Efeito ao passar o mouse */
+
+table tr:not(:first-child) {
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+table tr:not(:first-child):hover {
+    background-color: #f1eadc;
+}
+
+
+/* ---------- LINKS DOS MÓVEIS ---------- */
+
+td a {
+    color: #66543f;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+td a:hover {
+    color: #78805a;
+    text-decoration: underline;
+}
+
+
+/* ---------- PREÇO ---------- */
+
+td:nth-child(2) {
+    color: #5b6945;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+
+/* ---------- ESTOQUE ---------- */
+
+td:nth-child(3) {
+    color: #65584b;
+}
+
+
+/* ---------- MATERIAL ---------- */
+
+td:nth-child(4) {
+    color: #746554;
+}
+
+
+/* ---------- DETALHES DO MÓVEL ---------- */
+
+.detalhes-movel {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    padding: 25px;
+
+    background-color: #faf6ee;
+    border: 1px solid #ded1bf;
+    border-radius: 12px;
+}
+
+.detalhes-movel p {
+    margin-bottom: 16px;
+    color: #65584b;
+    font-size: 1.3rem;
+}
+
+.detalhes-movel p:last-child {
+    margin-bottom: 0;
+}
+
+.detalhes-movel strong {
+    color: #594331;
+    font-weight: 700;
+}
+
+/* ---------- BOTÃO "AVISO IMPORTANTE" ---------- */
+
+button {
+    display: block;
+    margin: 25px 0 0 auto;
+    padding: 12px 20px;
+
+    background-color: #68734d;
+    color: #fffdf7;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 0.95rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+button:hover {
+    background-color: #56613d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(86, 97, 61, 0.25);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* ---------- LINK "VOLTAR" ---------- */
+
+.voltar {
+    display: block;
+    width: fit-content;
+    margin: 25px 0 0 auto;
+    padding: 12px 20px;
+
+    background-color: #68734d;
+    color: #fffdf7;
+
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.voltar:hover {
+    background-color: #56613d;
+    transform: translateY(-2px);
+}
+
+
+/* ---------- RESPONSIVIDADE ---------- */
+
+@media (max-width: 700px) {
+
+    body > div {
+        width: 94%;
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    .imagem-banner {
+        height: 200px;
+    }
+
+    /*
+       Permite que a tabela seja rolada
+       horizontalmente em telas pequenas.
+    */
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th,
+    td {
+        padding: 13px 14px;
+    }
+}
