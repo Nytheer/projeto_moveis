@@ -6,16 +6,27 @@
     <title>{{ movel.nome }} - CasaBela</title>
     <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
 </head>
+
 <body>
+
     <div style="padding: 20px; font-family: Arial, sans-serif;">
+
         <h1>Detalhes do Móvel</h1>
-        <p><strong>Nome:</strong> {{ movel.nome }}</p>
-        <p><strong>Preço:</strong> R$ {{ movel.preco }}</p>
-        <p><strong>Estoque:</strong> {{ movel.estoque }} unidades</p>
-        <p><strong>Material:</strong> {{ movel.material }}</p>
-        
-        <br>
-        <a href="{% url 'index' %}">← Voltar para a página inicial</a>
+
+        <div class="detalhes-movel">
+
+            <p><strong>Nome:</strong> {{ movel.nome }}</p>
+            <p><strong>Preço:</strong> R$ {{ movel.preco }}</p>
+            <p><strong>Estoque:</strong> {{ movel.estoque }} unidades</p>
+            <p><strong>Material:</strong> {{ movel.material }}</p>
+
+        </div>
+
+        <a href="{% url 'index' %}" class="voltar">
+            ← Voltar para a página inicial
+        </a>
+
     </div>
+
 </body>
 </html>
