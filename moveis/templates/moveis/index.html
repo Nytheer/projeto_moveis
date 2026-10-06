@@ -3,17 +3,18 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>CasaBela - Catálogo de Móveis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Móveis</title>
+    <!-- Carrega o CSS -->
     <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
 </head>
 <body>
     <div style="padding: 20px; font-family: Arial, sans-serif;">
-        <h1>Catálogo de Móveis - CasaBela</h1>
+        <h1>CasaBela</h1>
+        <h2>Catálogo de Móveis</h2>
         
-        <!-- Imagem gerada -->
-        <div style="margin: 20px 0;">
-            <img src="{% static 'images/loja.jpg' %}" alt="Loja CasaBela" width="500" style="border-radius: 8px;">
-        </div>
+        <!-- Imagem apontando para a pasta estática com a classe do CSS -->
+        <img src="{% static 'imagens/loja.jpg' %}" alt="Loja CasaBela" class="imagem-banner">
 
         <table border="1" cellpadding="10" style="border-collapse: collapse; width: 100%; max-width: 800px;">
             <tr style="background-color: #f2f2f2;">
@@ -24,7 +25,6 @@
             </tr>
             {% for movel in moveis %}
             <tr>
-                <!-- Link dinâmico para os detalhes -->
                 <td><a href="{% url 'detalhe' movel.id %}">{{ movel.nome }}</a></td>
                 <td>R$ {{ movel.preco }}</td>
                 <td>{{ movel.estoque }}</td>
