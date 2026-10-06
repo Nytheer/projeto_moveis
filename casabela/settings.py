@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-8)zp0j69ro585bcbbr^(rqyy3g1r!0uyo5x-wq(#z#*)*4lg1('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'casabela.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -69,7 +69,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'casabela.wsgi.application'
 
-
+#djangoproject
 # Database
 # https://docs.djangoproject.com/en/6.1/ref/settings/#databases
 
@@ -116,6 +116,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.1/howto/static-files/
 
 STATIC_URL = 'static/'
+
+# Garante que o Django encontre os estáticos dentro dos apps
+STATICFILES_DIRS = [
+    BASE_DIR / "moveis" / "static",
+]
 
 
 # Email
